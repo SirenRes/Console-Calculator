@@ -1,8 +1,6 @@
 
 import datetime
 
-start = datetime.datetime.now()
-
 counter = 1
 
 def sumit(param1, param2):
@@ -22,7 +20,7 @@ def checkerror():
     while True:
         try:
             param1 = float(input(f"What's the {counter}. number?: "))
-        except ValueError as amkmali:
+        except ValueError as log:
             print("Calculators calculate numbers, nothing else.")
             continue
         else:
@@ -46,7 +44,7 @@ def entry():
             try:
                 operation = input("Pick an operation: ")
                 store = db[operation]
-            except KeyError as amkmali2:
+            except KeyError as log2:
                 print("Please choose one of the operations specified there.")
             else:
                 break
